@@ -46,7 +46,7 @@ void Server::readFromClient()
     //process.waitForFinished();
     system(qPrintable(cmd.toStdString().c_str()));
 
-    QString output = QString("The command \'") + cmd.toStdString().c_str() + "\' has executed";
+    QString output = QString("Команда \'") + cmd.toStdString().c_str() + "\' обработана сервером";
     socket->write(output.toStdString().c_str());
     socket->flush();
 
